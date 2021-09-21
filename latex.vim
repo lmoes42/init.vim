@@ -1,3 +1,5 @@
+" Snippets are handled
+" by ultisnips
 let g:tex_flavor = 'latex'
 let g:latex_view_general_viewer = 'skim'
 let g:vimtex_view_method = 'skim'
