@@ -1,0 +1,1 @@
+command! Ra FloatermNew ranger

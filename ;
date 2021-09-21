@@ -1,0 +1,29 @@
+nno Y y$
+nno Q @@
+nno ` <c-^>
+command! Set edit ~/.config/nvim/init.vim
+command! Settings edit ~/.config/nvim/init.vim
+map <C-n> :NERDTreeToggle<CR>
+let g:move_key_modifier = 'C'
+map <C-g> :Goyo<enter>
+command! T1 set termguicolors
+command! T0 set notermguicolors
+command! L Limelight!!
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+nno <esc> <C-w>
+nno \ <C-w>w
+
+nno <silent> <C-Left> :vertical resize +3<CR>
+nno <silent> <C-Right> :vertical resize -3<CR>
+nno <silent> <C-Up> :resize -3<CR>
+nno <silent> <C-Down> :resize +3<CR>
+
+map <Leader>v <C-w>t<C-w>H
+map <Leader>h <C-w>t<C-w>K
+map <Leader>o :only<cr>
+nno <Leader>t :VT<cr>
+
+
+ino <C-A> <C-O>yiW<End>=<C-R>=<C-R>0<CR>
