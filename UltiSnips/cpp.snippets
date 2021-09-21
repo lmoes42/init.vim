@@ -14,15 +14,22 @@ snippet print "output string"
 std::out << $1 << '\n';
 endsnippet
 
-snippet for "for loop"
+snippet for "canonical for loop"
 for (${1:i} = ${2:0}; $1 < ${3:42}; ${4:++i})
 {
 	$5
 }
 endsnippet
 
+snippet forarr "Range based for loop"
+for (auto ${1:&element}: ${2:array})
+{
+	$3
+}
+endsnippet
+
 snippet fori "for loop with declaration"
-for (${1:short/int/long/long long} ${2:i} = ${3:0}; $2 < ${4:42}; ${5:++i})
+for (${1:/size_t/int/long} ${2:i} = ${3:0}; $2 < ${4:42}; ${5:++i})
 {
 	$5
 }
@@ -44,9 +51,9 @@ while ($2)
 endsnippet
 
 snippet if "If statement"
-if ($1)
+if (${1:init}; $2)
 {
-	$2
+	$3
 }
 endsnippet
 
